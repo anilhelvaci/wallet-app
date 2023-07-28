@@ -371,7 +371,7 @@ export const makeWalletBridgeFromFollowers = (
   const fetchCurrent = async () => {
     const resolvedFollower = await currentFollower;
     await assertHasData(resolvedFollower);
-    watchBeansOwing();
+    // watchBeansOwing(); The localhost version of vstorage does not have the child node 'beansOwing'
     watchPendingOffers();
     watchChainBalances();
 
